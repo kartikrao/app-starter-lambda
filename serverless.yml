@@ -1,4 +1,4 @@
-service: serverless-typescript-demo
+service: ai-serverless-starter-ts
 
 provider:  
   name: aws
@@ -7,11 +7,17 @@ provider:
 plugins:  
   - serverless-webpack
 
-functions:  
+functions:
   hello:
-    handler: src/helloworld/handler.hello
-
+    # Should be filename.functioname
+    handler: hello.hello
     events:
      - http:
          path: hello
+         method: get
+  hola:
+    handler: hola.hola
+    events:
+     - http:
+         path: hola
          method: get

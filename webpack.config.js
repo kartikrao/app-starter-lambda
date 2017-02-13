@@ -2,7 +2,8 @@ var path = require('path');
 
 module.exports = {
     entry: {
-        "hello": './src/helloworld/handler.ts'
+        hello: './src/hello.ts',
+        hola: './src/hola.ts',
     },
     target: 'node',
     module: {
@@ -16,7 +17,7 @@ module.exports = {
     },
     output: {
         libraryTarget: 'commonjs',
-        path: "./",
-        filename: "handler.[name].js"
+        path: path.join(__dirname, '/dist'),
+        filename: "[name].js"
     },
 };
