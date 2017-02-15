@@ -1,3 +1,3 @@
-export function hello(event, context, callback) {  
-  callback(null, { message: 'Hello !!', event });
+export const hello = (event, context, callback) => {
+  callback(null, {body : { message: 'Hello !!' }});
 };

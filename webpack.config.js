@@ -1,5 +1,5 @@
 var path = require('path');
-
+var nodeExternals = require('webpack-node-externals');
 module.exports = {
     entry: {
         hello: './src/hello.ts',
@@ -7,17 +7,20 @@ module.exports = {
     },
     target: 'node',
     module: {
-        loaders: [{
-            test: /\.ts(x?)$/,
-            loader: 'ts-loader'
-        }]
+        preLoaders: [
+            { test: /\.json$/, loader: 'json' },
+        ],
+        loaders: [
+            { test: /\.ts(x?)$/, loader: 'ts-loader' }
+        ]
     },
     resolve: {
         extensions: ['.ts', '.js', '.tsx', '.jsx', '']
     },
     output: {
         libraryTarget: 'commonjs',
-        path: path.join(__dirname, '/dist'),
+        externals: [nodeExternals()],
+        path: path.join(__dirname, 'dist'),
         filename: "[name].js"
     },
 };

@@ -13,6 +13,12 @@
     "ts-loader": "^2.0.0",
     "typescript": "^2.1.6",
     "wallaby-webpack": "0.0.33",
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "webpack-node-externals": "^1.5.4",
+    "serverless-offline": "^3.8.3",
+    "serverless-plugin-stage-variables": "^1.6.6"
+  },
+  "dependencies": {
+
   }
 }
