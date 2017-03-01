@@ -1,7 +1,7 @@
 {
-  "name": "@adinfinity/ai-serverless-starter-ts",
+  "name": "@adinfinity/ai-starter-lambda",
   "version": "1.0.0",
-  "description": "Starter project for serverless typescript apps",
+  "description": "Starter project for AWS Lambda (Node.js)",
   "main": "index.js",
   "scripts": {
     "deploy-prod": "sls deploy --stage prod --apiDomain api.adinfinity.com.au",
