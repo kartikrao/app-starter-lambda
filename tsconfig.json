@@ -1,9 +1,21 @@
 {
   "compilerOptions": {
+    "compileOnSave": true,
+    "watch" : true,
     "target": "es5",
-    "module": "commonjs"
+    "outDir": "./lib",
+    "module": "commonjs",
+    "declaration": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "removeComments": true,
+    "moduleResolution": "node"
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "files": [
+    "src/hola.ts",
+    "src/hello.ts"
+  ],
+    "exclude": [
+        "node_modules"
+    ]
 }

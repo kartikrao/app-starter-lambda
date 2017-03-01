@@ -1,3 +1,9 @@
-export const hola = (event, context, callback) => {
-  callback(null, {body : { message: 'Hola !!' }});
+export const handle = (event: any, context: any, callback: any) => {
+    callback(null, {
+    statusCode: 200,
+    headers: {
+      'Content-Type' : 'text/plain'
+    },
+    body: 'Hola !!'
+  });
 };

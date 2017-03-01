@@ -4,25 +4,21 @@ provider:
   name: aws
   region: ap-southeast-2
   runtime: nodejs4.3
-  stage  : development
-  profile: development
+  stage  : ${opt:stage}
+  profile: serverless
   memorySize: 128
+  apiKeys:
+    - ai-starter-serverless-apikey-${opt:stage}
 
 plugins:  
   - serverless-webpack
   - serverless-offline
-  - serverless-plugin-stage-variables
 
 custom:
   # enable auto including modules
   webpackIncludeModules: true
   packagePath: './package.json'
   webpack: ./webpack.config.js
-  # stage variables available in handlers
-  stageVariables:
-    env : "${env:environment, self:provider.stage}"
-    development:
-    production:
 
 package:
   exclude:
