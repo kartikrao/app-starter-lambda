@@ -1,0 +1,1 @@
+## Starter project for serverless framework and AWS Lambda
